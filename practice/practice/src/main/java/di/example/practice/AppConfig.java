@@ -9,9 +9,12 @@ import di.example.practice.user.UserRepository;
 import di.example.practice.user.UserService;
 import di.example.practice.user.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 @Configuration
+@ComponentScan
 public class AppConfig {
     @Bean
     public UserService userService() {

@@ -7,13 +7,15 @@ import di.example.practice.order.OrderService;
 import di.example.practice.user.User;
 import di.example.practice.user.UserGrade;
 import di.example.practice.user.UserService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OrderApp {
     public static void main(String[] args) {
 
-        AppConfig appConfig = new AppConfig();
-        UserService userService = appConfig.userService();
-        OrderService orderService = appConfig.orderService();
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        UserService userService = ac.getBean("userService", UserService.class);
+        OrderService orderService = ac.getBean("orderService", OrderService.class);
 
         Long userId = 0L;
         User user = new User(userId, "larva", UserGrade.GRADE_1);

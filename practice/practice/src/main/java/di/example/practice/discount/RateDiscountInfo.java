@@ -2,7 +2,9 @@ package di.example.practice.discount;
 
 import di.example.practice.user.User;
 import di.example.practice.user.UserGrade;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountInfo implements DiscountInfo{
 
     private int grade_1_Rate = 5;

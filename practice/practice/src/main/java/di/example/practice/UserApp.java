@@ -3,12 +3,15 @@ import di.example.practice.user.User;
 import di.example.practice.user.UserGrade;
 import di.example.practice.user.UserService;
 import di.example.practice.user.UserServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class UserApp {
     public static void main(String[] args) {
        // UserService userService = new UserServiceImpl();
-        AppConfig appConfig = new AppConfig();
-        UserService userService = appConfig.userService();
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        UserService userService = ac.getBean("userService", UserService.class);
+
         User user = new User(0L, "kimcoding", UserGrade.GRADE_2);
         userService.signup(user);
 

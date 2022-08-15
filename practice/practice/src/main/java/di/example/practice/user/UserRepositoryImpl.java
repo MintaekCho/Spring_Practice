@@ -1,8 +1,11 @@
 package di.example.practice.user;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class UserRepositoryImpl implements UserRepository {
 
     private static Map<Long, User> users = new HashMap<>();

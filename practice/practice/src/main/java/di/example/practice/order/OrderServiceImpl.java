@@ -5,7 +5,10 @@ import di.example.practice.discount.DiscountInfo;
 import di.example.practice.user.User;
 import di.example.practice.user.UserRepository;
 import di.example.practice.user.UserRepositoryImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
    // private final UserRepository userRepository = new UserRepositoryImpl();
@@ -14,6 +17,7 @@ public class OrderServiceImpl implements OrderService {
     private  final UserRepository userRepository;
     private  final DiscountInfo discountInfo;
 
+    @Autowired
     public OrderServiceImpl(UserRepository userRepository, DiscountInfo discountInfo){
         this.userRepository = userRepository;
         this.discountInfo = discountInfo;
