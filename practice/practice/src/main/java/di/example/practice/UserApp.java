@@ -1,8 +1,8 @@
 package di.example.practice;
+
 import di.example.practice.user.User;
 import di.example.practice.user.UserGrade;
 import di.example.practice.user.UserService;
-import di.example.practice.user.UserServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

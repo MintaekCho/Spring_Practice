@@ -1,9 +1,12 @@
 package di.example.practice.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.stereotype.Component;
 
-@Configuration
+@Component
 public class User {
     private Long id;
     private String name;

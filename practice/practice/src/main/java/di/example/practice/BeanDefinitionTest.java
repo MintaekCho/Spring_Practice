@@ -6,10 +6,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class BeanDefinitionTest {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
-        String[] beanDefiniitionNames = ac.getBeanDefinitionNames();
+        String[] beanDefinitionNames = ac.getBeanDefinitionNames();
 
-        for(String beanDefinitionName : beanDefiniitionNames) {
-            BeanDefinition beanDefinition = ac.getBeanDefinitionNames(beanDefinitionName);
+        for(String beanDefinitionName : beanDefinitionNames) {
+            BeanDefinition beanDefinition = ac.getBeanDefinition(beanDefinitionName);
 
             if(beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION){
                 System.out.println("beanDefinitionNames = " + beanDefinitionName +

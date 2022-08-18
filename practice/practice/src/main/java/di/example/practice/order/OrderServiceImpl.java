@@ -7,8 +7,9 @@ import di.example.practice.user.UserRepository;
 import di.example.practice.user.UserRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class OrderServiceImpl implements OrderService {
 
    // private final UserRepository userRepository = new UserRepositoryImpl();
